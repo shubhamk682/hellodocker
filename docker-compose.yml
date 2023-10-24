@@ -1,11 +1,10 @@
-# docker-compose.yml
-
 version: '3'
-
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8080:80"
+    volumes:
+      - ./app:/app
